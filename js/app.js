@@ -1,5 +1,5 @@
 (function () {
-  const OWNER = "yusuf9847748-cyber";
+  const OWNER = "Xacpant";
   const REPO = "xacpant";
   const API = `https://api.github.com/repos/${OWNER}/${REPO}/releases/latest`;
 
