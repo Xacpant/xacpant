@@ -1,7 +1,7 @@
 (function () {
   const OWNER = "Xacpant";
-  const REPO = "xacpant";
-  const API = `https://api.github.com/repos/${OWNER}/${REPO}/releases/latest`;
+  const REPO = "firmware";
+  const API = `https://api.github.com/repos/${OWNER}/${REPO}/releases?per_page=1`; // includes prereleases
 
   const i18n = {
     tr: {
@@ -124,7 +124,17 @@
         return;
       }
       if (!res.ok) throw new Error(String(res.status));
-      const data = await res.json();
+      const list = await res.json();
+      const data = Array.isArray(list) ? list[0] : list;
+      if (!data) {
+        tag.textContent = "—";
+        name.textContent = "";
+        status.textContent = i18n[lang].fw_none;
+        const url = `https://github.com/${OWNER}/${REPO}/releases`;
+        btn.href = url;
+        heroBtn.href = url;
+        return;
+      }
       tag.textContent = data.tag_name || "—";
       name.textContent = data.name && data.name !== data.tag_name ? data.name : "";
       const asset =
