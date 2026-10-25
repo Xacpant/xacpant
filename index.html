@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Xacpant — LilyGO T-Embed CC1101 Plus firmware. Official downloads and docs." />
+  <title>Xacpant — T-Embed CC1101 Plus</title>
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="top">
+    <a class="brand" href="#home">
+      <img src="assets/logo.png" alt="Xacpant" width="40" height="40" />
+      <span>XACPANT</span>
+    </a>
+    <nav>
+      <a href="#home" data-i18n="nav_home">Ana sayfa</a>
+      <a href="#firmware" data-i18n="nav_firmware">Firmware</a>
+      <a href="#features" data-i18n="nav_features">Özellikler</a>
+      <a href="#docs" data-i18n="nav_docs">Doküman</a>
+      <a href="#credit" data-i18n="nav_credit">Credit</a>
+    </nav>
+    <div class="lang">
+      <button type="button" id="lang-tr" class="active" aria-label="Türkçe">TR</button>
+      <button type="button" id="lang-en" aria-label="English">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <img class="hero-logo" src="assets/logo.png" alt="Xacpant logo" width="160" height="160" />
+      <p class="eyebrow" data-i18n="eyebrow">LilyGO T-Embed CC1101 Plus</p>
+      <h1>XACPANT</h1>
+      <p class="lede" data-i18n="lede">T-Embed CC1101 Plus için optimize edilmiş firmware. Resmi indirmeler, sürüm notları ve kaynak — tek yerde.</p>
+      <div class="cta">
+        <a class="btn primary" id="download-btn" href="#firmware" data-i18n="cta_download">Firmware indir</a>
+        <a class="btn ghost" id="github-btn" href="https://github.com/yusuf9847748-cyber/xacpant" target="_blank" rel="noopener" data-i18n="cta_github">GitHub</a>
+      </div>
+    </section>
+
+    <section id="firmware" class="panel">
+      <h2 data-i18n="fw_title">Firmware</h2>
+      <p data-i18n="fw_desc">En son sürümü GitHub Releases üzerinden yayınlıyoruz. Aşağıdaki buton otomatik olarak son release’e bağlanır.</p>
+      <div class="release-card" id="release-card">
+        <div class="release-meta">
+          <span class="label" data-i18n="fw_latest">Son sürüm</span>
+          <strong id="release-tag">…</strong>
+          <span id="release-name" class="muted"></span>
+        </div>
+        <a class="btn primary" id="release-download" href="https://github.com/yusuf9847748-cyber/xacpant/releases" target="_blank" rel="noopener" data-i18n="fw_open">Releases’i aç</a>
+        <p id="release-status" class="muted" data-i18n="fw_loading">Sürüm bilgisi yükleniyor…</p>
+      </div>
+    </section>
+
+    <section id="features" class="panel">
+      <h2 data-i18n="feat_title">Özellikler</h2>
+      <ul class="grid-feats">
+        <li>
+          <h3 data-i18n="f1_t">Board odaklı</h3>
+          <p data-i18n="f1_d">T-Embed CC1101 Plus donanımına göre temizlenmiş menü; olmayan özellikler yok.</p>
+        </li>
+        <li>
+          <h3 data-i18n="f2_t">OTA güncelleme</h3>
+          <p data-i18n="f2_d">Wi‑Fi üzerinden GitHub’dan güncelle — PC’ye takmak zorunlu değil.</p>
+        </li>
+        <li>
+          <h3 data-i18n="f3_t">Kablosuz dosya</h3>
+          <p data-i18n="f3_d">Telefon tarayıcısı ve bulut yolu ile USB’siz dosya aktarımı.</p>
+        </li>
+        <li>
+          <h3 data-i18n="f4_t">Performans</h3>
+          <p data-i18n="f4_d">Akıcı UI, kararlı RF/NFC/nRF24 yolları, donma ve çökme odaklı sertleştirme.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="docs" class="panel">
+      <h2 data-i18n="docs_title">Doküman</h2>
+      <ol class="steps">
+        <li data-i18n="d1">Son firmware’i Releases’ten indir.</li>
+        <li data-i18n="d2">İlk kurulumda USB ile flash et (veya mevcut OTA yolunu kullan).</li>
+        <li data-i18n="d3">Wi‑Fi ayarla; sonraki güncellemeler Ayarlar → Güncelle ile gelir.</li>
+      </ol>
+      <p class="muted" data-i18n="docs_note">Detaylı kurulum notları repo README içinde güncellenir.</p>
+    </section>
+
+    <section id="credit" class="panel">
+      <h2 data-i18n="credit_title">Credit</h2>
+      <p data-i18n="credit_body">Xacpant, Bruce firmware’den esinlenen bir fork’tur. Bruce projesine ve katkıda bulunanlara teşekkürler. Bu site ve marka Xacpant’a aittir.</p>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/logo.png" alt="" width="24" height="24" />
+    <span>© <span id="year"></span> Xacpant</span>
+    <a href="https://github.com/yusuf9847748-cyber/xacpant" target="_blank" rel="noopener">github.com/yusuf9847748-cyber/xacpant</a>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
